@@ -12,3 +12,16 @@
 .navbar a:visited {
   color: #fbcf5e;
 }
+
+img  {
+  width: 100%;
+  display: block;
+}
+
+.Hero {
+  margin-top: 50px;
+}
+
+h1, h2 {
+  font-family: 'Open Sans', sans-serif;
+}
