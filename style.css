@@ -57,3 +57,16 @@ hr {
   font-family: 'Open Sans', sans-serif;
   font-size: 36px !important;
 }
+
+ul {
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+li:nth-of-type(1) {
+  font-weight: bold;
+}
