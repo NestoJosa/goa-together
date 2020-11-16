@@ -25,3 +25,25 @@ img  {
 h1, h2 {
   font-family: 'Open Sans', sans-serif;
 }
+
+hr {
+  border-top: 10px solid rgba(251,207,94);
+}
+
+.WhyWeWrote {
+  height: 300px;
+  border: 1px solid black;
+  background: linear-gradient(to right, rgb(89, 168, 195), rgba(89, 168, 195, 0.2), rgba(89, 168, 195, 0.1)), url(./assets/authors.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.WhyWeWrote h3{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px !important;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;;
+}
