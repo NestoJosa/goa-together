@@ -32,7 +32,6 @@ hr {
 
 .WhyWeWrote {
   height: 300px;
-  border: 1px solid black;
   background: linear-gradient(to right, rgb(89, 168, 195), rgba(89, 168, 195, 0.2), rgba(89, 168, 195, 0.1)), url(./assets/authors.png);
   background-size: cover;
   background-position: center;
