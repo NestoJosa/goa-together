@@ -1,0 +1,14 @@
+/* style.css */
+
+.navbar {
+  background-color: #5890a8;
+}
+
+.navbar a {
+  color: #fbcf5e;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.navbar a:visited {
+  color: #fbcf5e;
+}
