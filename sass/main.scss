@@ -1,59 +1,86 @@
-/* main.scss */
+// main.scss 
 
-img  {
-  width: 100%;
-  display: block;
-}
+/* 
 
-.Hero {
-  margin-top: 50px;
-}
+  Reset
 
-h1, h2 {
-  font-family: 'Open Sans', sans-serif;
-}
+*/
 
-hr {
-  border-top: 50px solid rgba(251,207,94);
-}
-
-.WhyWeWrote {
-  height: 300px;
-  background: linear-gradient(to right, rgb(89, 168, 195), rgba(89, 168, 195, 0.2), rgba(89, 168, 195, 0.1)), url(./assets/authors.png);
-  background-size: cover;
-  background-position: center;
-}
-
-.WhyWeWrote h3{
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 36px !important;
-}
-
-.font-bebas {
-  font-family: 'Bebas Neue', sans-serif;;
-}
-
-.Webinars {
-  height: 200px;
-  background: linear-gradient(to right, rgb(89, 168, 195), rgba(89, 168, 195, 0.2), rgba(89, 168, 195, 0.1));
-}
-
-.Webinars h3 {
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 36px !important;
-}
-
-ul {
-  margin-top: 20px;
-  padding-left: 0;
+ul, li {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 li {
   list-style-type: none;
 }
 
-li:nth-of-type(1) {
-  font-weight: bold;
+a {
+  text-decoration: none !important;
+}
+
+img  {
+  width: 100%;
+  display: block;
+}
+
+
+/* 
+
+  Variables
+
+*/
+
+$brand-colors: (
+  'first': #5890A8,
+  'second': #FBCF5E
+);
+
+$brand-fonts: (
+  'first': (Open Sans, sans-serif),
+  'second': (Bebas Neue, sans-serif),
+  'third': (Libre Baskerville, serif),
+);
+
+/* 
+
+  Menu
+
+*/
+
+.MenuWrapper {
+  background-color: map-get($brand-colors, first);
+}
+
+.Menu {
+  font-family: map-get($brand-fonts, second);
+  height: 50px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__listItem {
+    width: 110px;
+    text-align: center;
+
+    &:not(:first-child) {
+      border-left: 1px solid white;
+    }
+  }
+
+  &__link {
+    color: white;
+    letter-spacing: 0.1rem;
+    transition: color ease 0.5s;
+    padding: 5px;
+    &:hover {
+      color: map-get($brand-colors, second) !important; // => yellow
+    }
+  }
 }
