@@ -1,10 +1,17 @@
 // main.scss 
 
+
+
 /* 
 
   Reset
 
 */
+
+html {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
 
 
 li {
