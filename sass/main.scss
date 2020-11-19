@@ -44,6 +44,35 @@ $brand-fonts: (
 
 /* 
 
+  Mixins
+
+*/
+
+@mixin flex-center {
+  // center horizontally and vertically
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button-base {
+  height: 50px;
+  width: 130px;
+  @include flex-center;
+}
+
+@mixin link-base {
+  height: 100%;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: map-get($brand-fonts, first);
+  font-size: 15px;
+  font-weight: 600;
+  @include flex-center;
+}
+
+/* 
+
   Menu
 
 */
@@ -54,7 +83,7 @@ $brand-fonts: (
 
 .Menu {
   font-family: map-get($brand-fonts, second);
-  height: 50px;
+  height: 70px;
   width: 100%;
 
   display: flex;
@@ -80,7 +109,94 @@ $brand-fonts: (
     transition: color ease 0.5s;
     padding: 5px;
     &:hover {
-      color: map-get($brand-colors, second) !important; // => yellow
+      color: map-get($brand-colors, second) !important;
     }
   }
+}
+
+/* 
+
+  Hero
+
+*/
+
+.HeroWrapper {
+  background-color: map-get($brand-colors, first);
+  padding-bottom: 50px;
+}
+
+.Hero {
+
+  &__heading {
+    font-family: map-get($brand-fonts, second);
+    color: map-get($brand-colors, second);
+    margin-top: 80px;
+    font-size: 4.3rem;
+  }
+
+  &__subHeading {
+    font-family: map-get($brand-fonts, third);
+    color: white;
+    font-size: 2.1rem;
+    line-height: 1.2;
+  }
+
+  &__authors {
+    font-family: map-get($brand-fonts, first);
+    color: white;
+    margin-top: 20px;
+    font-size: 1.3rem;
+  }
+
+  &__buttonsWrapper {
+    display: flex;
+    margin-top: 45px;
+  }
+
+  &__bookButton {
+    background-color: white;
+    margin-right: 10px;
+    @include button-base;
+  }
+
+  &__bookLink {
+    color: rgba(black, 0.7) !important;
+    @include link-base;
+    &:visited {
+      color: rgba(black, 0.7) !important;
+    }
+  }
+
+  &__chapterButton {
+    border: 1px solid white;
+    @include button-base;
+  }
+
+  &__chapterLink {
+    color: white !important;
+    @include link-base;
+    // change the font-weight from link-base
+    // from 600 to 300
+    font-weight: 300;
+    &:visited {
+      color: white !important;
+    }
+  }
+
+  &__bookImage {
+    margin-top: 40px;
+  }
+}
+
+/* 
+
+  hr - horizontal rule
+
+*/
+
+hr {
+  background-color: map-get($brand-colors, second);
+  height: 10px;  
+  width: 100%;
+  margin: 0 !important;
 }
