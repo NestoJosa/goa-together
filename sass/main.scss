@@ -2,16 +2,6 @@
 
 /* 
 
-  dev
-
-*/
-
-.dev-space {
-  height: 300px;
-}
-
-/* 
-
   Reset
 
 */
@@ -346,5 +336,23 @@ hr {
     &:hover {
       color: white;
     }
+  }
+}
+
+/* 
+
+  Why  
+
+*/
+
+.Why {
+  padding: 25px 0;
+
+  &__sectionHeading {
+    color: map-get($brand-colors, second);
+    font-family: map-get($brand-fonts, second);
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
   }
 }
