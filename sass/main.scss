@@ -345,11 +345,16 @@ hr {
 
 */
 
+.WhyWrapper {
+  background-color: #f1e8c8;
+}
+
 .Why {
   padding: 25px 0;
 
   &__sectionHeading {
-    color: map-get($brand-colors, second);
+    /* color: map-get($brand-colors, second); */
+    color: #519cb2;
     font-family: map-get($brand-fonts, second);
     width: 100%;
     text-align: center;
@@ -362,8 +367,8 @@ hr {
     margin-bottom: 35px;
   }
 
-  &__imageWrapper {
-    //do something if needed
+  &__image {
+    opacity: 0.9;
   }
 
   &__text {
@@ -381,5 +386,6 @@ hr {
 */
 
 .LogoWrapper {
-  background-color: lightgray;
+  background-color: #f1e8c8;
+  padding: 20px 0;
 }
