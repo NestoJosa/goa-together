@@ -16,10 +16,6 @@
 
 */
 
-ul, li {
-  margin: 0 !important;
-  padding: 0 !important;
-}
 
 li {
   list-style-type: none;
@@ -101,6 +97,8 @@ $brand-fonts: (
 
   &__list {
     display: flex;
+    margin: 0;
+    padding: 0;
   }
 
   &__listItem {
@@ -208,6 +206,7 @@ hr {
   height: 10px;  
   width: 100%;
   margin: 0 !important;
+  border: none;
 }
 
 /* 
@@ -279,4 +278,73 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* 
+
+  Webinar
+
+*/
+
+.WebinarWrapper {
+  background-color: map-get($brand-colors, first);
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.Webinar {
+  &__sectionHeading {
+    color: map-get($brand-colors, second);
+    font-family: map-get($brand-fonts, second);
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &__listWrapper {
+    margin-top: 55px;
+  }
+
+  &__list {
+    margin: 10px 0 80px; // top horiz. bottom
+    padding: 0;
+    color: white;
+  }
+
+  &__name {
+    color: white;
+    font-family: map-get($brand-fonts, third);
+    font-size: 1.2rem;
+  }
+
+  &__date {
+    font-family: map-get($brand-fonts, first);
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  &__time {
+    font-family: map-get($brand-fonts, first);
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  &__signUpButtonWrapper {
+    margin-top: 10px;
+  }
+
+  &__signUpButton {
+    @include button-base;
+    color: white;
+    border: 1px solid white;
+  }
+
+  &__signUpLink {
+    @include link-base;
+    color: white;
+    font-weight: 300;
+    &:hover {
+      color: white;
+    }
+  }
 }
