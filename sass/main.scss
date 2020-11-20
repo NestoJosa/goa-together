@@ -124,6 +124,16 @@ $breakpoints: (
 
 /* 
 
+  Utils
+
+*/
+
+.top-buffer {
+  margin-top: 15px;
+}
+
+/* 
+
   Menu
 
 */
@@ -389,6 +399,8 @@ hr {
     @include for-sm-up {
       margin-top: 0;
       @include flex-center;
+      // overrule the justify-content:: center
+      justify-content: right;
     }
   }
 
