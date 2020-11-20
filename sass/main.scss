@@ -41,7 +41,7 @@ $brand-colors: (
 $brand-fonts: (
   'first': (Open Sans, sans-serif),
   'second': (Bebas Neue, sans-serif),
-  'third': (Libre Baskerville, serif),
+  'third': (Old Standard TT, serif),
 );
 
 /* 
@@ -143,6 +143,7 @@ $brand-fonts: (
     color: white;
     font-size: 2.1rem;
     line-height: 1.2;
+    font-weight: 700;
   }
 
   &__authors {
