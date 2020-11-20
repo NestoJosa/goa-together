@@ -100,25 +100,48 @@
 
     <hr>
 
-    <div class="container-fluid WebinarWrapper">
+    <div class="container-fluid WebinarsSection">
       <div class="container">
         <div class="row">
           <div class="col">
-            <div class="Webinar__sectionHeading">
-              <a name="webinars" id="webinars">Webinars</a>
+            <div class="WebinarsSection__heading">
+              <!-- refactor the id of the following anchors to e.g. menuHook-webinars -->
+              <!-- and write some explanatory comment for youself down the line -->
+              <a name="webinars" id="webinars"> 
+                <h3>Webinars</h3>
+              </a>
             </div>
             
-            <div class="Webinar__listWrapper">
+            <div class="WebinarsWrapper">
+
+              <div class="container Webinar">
+                <div class="row">
+                  <div class="col-sm-7">
+                    <ul class="Webinar__list">
+                      <li class="Webinar__name">Being TOGETHER online</li>
+                      <li class="Webinar__date">10 December 2020</li>
+                      <li class="Webinar__time">14 - 15 pm</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="Webinar__signUpButton">
+                      <a class="Webinar__signUpLink" href="#">Sign Up</a>
+                    </div>
+                  </div>
+                </div><!-- /row -->
+              </div><!-- /container Webinar -->
 
               <ul class="Webinar__list">
                 <li class="Webinar__name">Being TOGETHER online</li>
                 <li class="Webinar__date">10 December 2020</li>
                 <li class="Webinar__time">14 - 15 pm</li>
+
                 <li class="Webinar__signUpButtonWrapper">
                   <div class="Webinar__signUpButton">
                     <a class="Webinar__signUpLink" href="#">Sign Up</a>
                   </div>
                 </li>
+
               </ul>
 
               <ul class="Webinar__list">
@@ -176,11 +199,11 @@
                 </li>
               </ul>
 
-            </div><!-- /Webinar__listWrapper -->
+            </div><!-- /WebinarsWrapper -->
           </div><!-- /col -->
         </div><!-- /row -->
       </div><!-- /container -->
-    </div><!-- /container-fluid WebinarWrapper -->
+    </div><!-- /container-fluid WebinarsSection -->
 
     <hr>
 

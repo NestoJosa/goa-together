@@ -283,37 +283,37 @@ hr {
 
 /* 
 
-  Webinar
+  Webinars Section
 
 */
 
-.WebinarWrapper {
+.WebinarsSection {
   background-color: map-get($brand-colors, first);
   padding-top: 35px;
   padding-bottom: 35px;
-}
 
-.Webinar {
-  &__sectionHeading {
+  &__heading {
     color: map-get($brand-colors, second);
     font-family: map-get($brand-fonts, second);
     width: 100%;
     text-align: center;
     font-size: 2rem;
   }
+}
 
-  &__listWrapper {
-    margin-top: 55px;
-  }
+.WebinarsWrapper {
+  margin-top: 55px;
+}
+
+.Webinar {
+  border: 1px solid white;
 
   &__list {
-    margin: 10px 0 80px; // top horiz. bottom
     padding: 0;
     color: white;
   }
 
   &__name {
-    color: white;
     font-family: map-get($brand-fonts, third);
     font-size: 1.2rem;
   }
@@ -328,10 +328,6 @@ hr {
     font-family: map-get($brand-fonts, first);
     font-weight: 300;
     font-size: 1rem;
-  }
-
-  &__signUpButtonWrapper {
-    margin-top: 10px;
   }
 
   &__signUpButton {
