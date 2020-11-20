@@ -25,6 +25,71 @@
   </head>
   <body>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row justify-content-center">
+                <div class="col-10">
+                  <span class="modal-title">Pick a provider:</span>
+                  <ul>
+                    <li class="modal-list-item">
+                      <a href="https://www.amazon.com/gp/product/B08NRP13R4?pf_rd_r=YTHJHCZV5DB8HT8XXVMZ&pf_rd_p=6fc81c8c-2a38-41c6-a68a-f78c79e7253f">
+                        Amazon.com (US)
+                        <span>
+                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="modal-list-item">
+                      <a href="https://www.amazon.de/-/en/Jenni-Jepsen/dp/B08NRP13R4/ref=sr_1_1?dchild=1&keywords=Jenni+jepsen&qid=1605879725&sr=8-1">
+                        Amazon.de (DE)
+                        <span>
+                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="modal-list-item">
+                      <a href="https://www.amazon.co.uk/TOGETHER-leaders-involve-engage-people/dp/B08NRP13R4/ref=sr_1_1?dchild=1&keywords=ole+jepsen&qid=1605879760&sr=8-1">
+                        Amazon.co.uk (UK)
+                        <span>
+                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                  
+                    <li class="modal-list-item opague">
+                      <a href="#" class="utils-cursor-default">
+                        Saxo.dk (DK) - Available soon!
+                        <span>
+                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container-fluid MenuWrapper">
       <div class="container">
         <div class="row">
@@ -56,7 +121,7 @@
             <p class="Hero__authors">JENNI JEPSEN & OLE JEPSEN</p>
             <div class="Hero__buttonsWrapper">
               <div class="Hero__bookButton">
-                <a class="Hero__bookLink" href="#">Order Soon</a>
+                <a class="Hero__bookLink" href="#" data-toggle="modal" data-target="#exampleModal">Order Soon</a>
               </div>
               <div class="Hero__chapterButton">
                 <a class="Hero__chapterLink" href="#">Free Chapter</a>
