@@ -44,11 +44,60 @@ $brand-fonts: (
   'third': (Old Standard TT, serif),
 );
 
+// Bootstrap Breakpoints
+// src: https://getbootstrap.com/docs/4.1/layout/grid/
+// - modified: included xxl breakpoint
+$breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px,
+  // Extra Extra large screen
+  xxl: 1800px
+);
+
 /* 
 
   Mixins
 
 */
+
+// Media Queries Mixins
+@mixin for-sm-up {
+  @media only screen and (min-width: map-get($breakpoints, 'sm' )) {
+    @content;
+  }  
+}
+
+@mixin for-md-up {
+  @media only screen and (min-width: map-get($breakpoints, 'md' )) {
+    @content;
+  }  
+}
+
+@mixin for-lg-up {
+  @media only screen and (min-width: map-get($breakpoints, 'lg' )) {
+    @content;
+  }  
+}
+
+@mixin for-xl-up {
+  @media only screen and (min-width: map-get($breakpoints, 'xl' )) {
+    @content;
+  }  
+}
+
+@mixin for-xxl-up {
+  @media only screen and (min-width: map-get($breakpoints, 'xxl' )) {
+    @content;
+  }  
+}
 
 @mixin flex-center {
   // center horizontally and vertically
@@ -307,8 +356,11 @@ hr {
 
 .Webinar {
   border: 1px solid white;
+  padding-top: 40px;
+  padding-bottom: 30px;
 
   &__list {
+    margin: 0;
     padding: 0;
     color: white;
   }
@@ -316,6 +368,7 @@ hr {
   &__name {
     font-family: map-get($brand-fonts, third);
     font-size: 1.2rem;
+    font-weight: 700;
   }
 
   &__date {
@@ -330,13 +383,22 @@ hr {
     font-size: 1rem;
   }
 
-  &__signUpButton {
+  &__buttonWrapper {
+    width: 100%;
+    margin-top: 20px;
+    @include for-sm-up {
+      margin-top: 0;
+      @include flex-center;
+    }
+  }
+
+  &__button {
     @include button-base;
     color: white;
     border: 1px solid white;
   }
 
-  &__signUpLink {
+  &__link {
     @include link-base;
     color: white;
     font-weight: 300;
