@@ -62,6 +62,8 @@ $breakpoints: (
   xxl: 1800px
 );
 
+
+
 /* 
 
   Mixins
@@ -120,6 +122,14 @@ $breakpoints: (
   font-size: 15px;
   font-weight: 600;
   @include flex-center;
+}
+
+@mixin section-heading {
+  font-family: map-get($brand-fonts, second);
+  width: 100%;
+  text-align: center;
+  font-size: 2.6rem;
+  margin: 40px 0 30px;
 }
 
 /* 
@@ -185,7 +195,7 @@ $breakpoints: (
 
 .HeroWrapper {
   background-color: map-get($brand-colors, first);
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .Hero {
@@ -200,7 +210,7 @@ $breakpoints: (
   &__subHeading {
     font-family: map-get($brand-fonts, third);
     color: white;
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     line-height: 1.2;
     font-weight: 700;
   }
@@ -208,45 +218,40 @@ $breakpoints: (
   &__authors {
     font-family: map-get($brand-fonts, first);
     color: white;
-    margin-top: 20px;
-    font-size: 1.3rem;
+    margin-top: 10px;
+    font-size: 1.2rem;
   }
 
   &__buttonsWrapper {
     display: flex;
-    margin-top: 45px;
+    margin-top: 30px;
   }
 
   &__bookButton {
-    //background-color: white;
-    border: 1px solid white;
+    background-color: white;
     margin-right: 10px;
     @include button-base;
   }
 
   &__bookLink {
-    //color: rgba(black, 0.7) !important;
-    color: white;
+    color: rgba(black, 0.7) !important;
     @include link-base;
-    font-weight: 300;
     &:visited {
-      //color: rgba(black, 0.7) !important;
-      color: white;
+      color: rgba(black, 0.7) !important;
     }
   }
 
   &__chapterButton {
     border: 1px solid white;
-    background-color: white;
     @include button-base;
   }
 
   &__chapterLink {
-    color: rgba($color: #000000, $alpha: 0.7);
+    color: white;
     @include link-base;
-    font-weight: 600;
+    font-weight: 300;
     &:visited {
-      color: rgba($color: #000000, $alpha: 0.7);
+      color: white;
     }
   }
 
@@ -277,7 +282,6 @@ hr {
 
 
 .QuoteWrapper {
-  padding-top: 25px;
   padding-bottom: 25px;
 }
 
@@ -297,6 +301,9 @@ hr {
     width: 100%;
     font-size: 1.2rem;
     font-weight: 700;
+    @include for-sm-up {
+      font-size: 2rem;
+    }
   }
 
   &__author {
@@ -341,6 +348,10 @@ hr {
   height: 100%;
 }
 
+.VideoSection {
+  padding: 50px 0;
+}
+
 /* 
 
   Webinars Section
@@ -349,20 +360,16 @@ hr {
 
 .WebinarsSection {
   background-color: map-get($brand-colors, first);
-  padding-top: 35px;
   padding-bottom: 35px;
 
   &__heading {
+  @include section-heading;
     color: map-get($brand-colors, second);
-    font-family: map-get($brand-fonts, second);
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
   }
 }
 
 .WebinarsWrapper {
-  margin-top: 55px;
+  //do something if needed
 }
 
 .Webinar {
@@ -378,20 +385,21 @@ hr {
 
   &__name {
     font-family: map-get($brand-fonts, third);
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
     font-weight: 700;
   }
 
   &__date {
     font-family: map-get($brand-fonts, first);
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   &__time {
     font-family: map-get($brand-fonts, first);
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   &__buttonWrapper {
@@ -435,18 +443,12 @@ hr {
   padding: 25px 0;
 
   &__sectionHeading {
-    /* color: map-get($brand-colors, second); */
-    color: #519cb2;
-    font-family: map-get($brand-fonts, second);
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    @include section-heading;
+    color: map-get($brand-colors, first);
   }
 
   &__imageWrapper {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 
   &__image {
