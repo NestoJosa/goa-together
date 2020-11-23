@@ -271,6 +271,9 @@ $breakpoints: (
     &:visited {
       color: rgba(black, 0.7) !important;
     }
+    &:hover {
+      color: white;
+    }
   }
 
   &__chapterButton {
@@ -283,6 +286,9 @@ $breakpoints: (
     @include link-base;
     font-weight: 300;
     &:visited {
+      color: white;
+    }
+    &:hover {
       color: white;
     }
   }
