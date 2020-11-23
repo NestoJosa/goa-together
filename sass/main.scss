@@ -462,7 +462,12 @@ hr {
     // don't change the cursor on hover
     cursor: default;
     // and remove any pointer events
-    pointer-events: none; 
+    pointer-events: none;
+    
+    @include for-sm-up{
+      // for chrome and edge
+      margin-left: auto;
+    }
   }
 
   &__button--active {
