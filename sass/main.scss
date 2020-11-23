@@ -128,8 +128,15 @@ $breakpoints: (
   font-family: map-get($brand-fonts, second);
   width: 100%;
   text-align: center;
+  margin: 60px 0 40px;
+  line-height: 1.1;
   font-size: 2.6rem;
-  margin: 40px 0 30px;
+  @include for-sm-up {
+    font-size: 2.8rem;
+  }
+  @include for-lg-up {
+    font-size: 3rem;
+  }
 }
 
 /* 
@@ -195,7 +202,11 @@ $breakpoints: (
 
 .HeroWrapper {
   background-color: map-get($brand-colors, first);
-  padding-bottom: 100px;
+  padding-bottom: 40px;
+  @include for-sm-up{
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
 }
 
 .Hero {
@@ -204,15 +215,30 @@ $breakpoints: (
     font-family: map-get($brand-fonts, second);
     color: map-get($brand-colors, second);
     margin-top: 80px;
+    @include for-sm-up {
+      margin-top: 0;
+    }
     font-size: 4.3rem;
+    @include for-sm-up {
+      font-size: 4.5rem;
+    }
+    @include for-lg-up {
+      font-size: 4.7rem;
+    }
   }
 
   &__subHeading {
     font-family: map-get($brand-fonts, third);
     color: white;
-    font-size: 1.8rem;
     line-height: 1.2;
     font-weight: 700;
+    font-size: 1.8rem;
+    @include for-sm-up {
+      font-size: 2rem;
+    }
+    @include for-lg-up {
+      font-size: 2.2rem;
+    }
   }
 
   &__authors {
@@ -220,6 +246,12 @@ $breakpoints: (
     color: white;
     margin-top: 10px;
     font-size: 1.2rem;
+    @include for-sm-up {
+      font-size: 1.4rem;
+    }
+    @include for-lg-up {
+      font-size: 1.6rem;
+    }
   }
 
   &__buttonsWrapper {
@@ -256,7 +288,10 @@ $breakpoints: (
   }
 
   &__bookImage {
-    margin-top: 40px;
+    margin-top: 60px;
+    @include for-sm-up{
+      margin-top: 0;
+    }
   }
 }
 
@@ -299,35 +334,36 @@ hr {
     font-family: map-get($brand-fonts, third);
     text-align: center;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.4;
     font-weight: 700;
     color: rgba(black, 0.8);
     @include for-sm-up {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
-  }
-
-  &__author {
-    margin-top: 20px;
-    font-family: map-get($brand-fonts, first);
-    text-align: center;
-    width: 100%;
   }
 
   &__author {
     margin-top: 10px;
     font-family: map-get($brand-fonts, first);
+    font-size: 1.1rem;
     text-align: center;
     width: 100%;
+    @include for-sm-up {
+      font-size: 1.5rem;
+    }
   }
 
   &__authorBooks {
     font-family: map-get($brand-fonts, first);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
     text-align: center;
     width: 100%;
     margin-top: 4.6px;
+    @include for-sm-up {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -387,7 +423,7 @@ hr {
 
   &__name {
     font-family: map-get($brand-fonts, third);
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     line-height: 1.2;
     font-weight: 700;
   }
@@ -474,9 +510,13 @@ hr {
 
   &__text {
     font-family: map-get($brand-fonts, first);
+    margin-bottom: 30px;
     font-size: 1rem;
     line-height: 1.5;
-    margin-bottom: 30px;
+    @include for-lg-up {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
   }
 }
 
