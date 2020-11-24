@@ -466,12 +466,12 @@ hr {
 
   &__button {
     @include button-base;
-    background-color: map-get($brand-colors, first);
-    border: 1px solid rgba(white, 0.1);
+    background-color: gray;
+    border: 1px solid rgba(white, 1);
 
     // the buttons are 'inactive' as default,
     // so make them opague 
-    //opacity: 0.5;
+    opacity: 0.5;
     // don't change the cursor on hover
     cursor: default;
     // and remove any pointer events
@@ -518,6 +518,7 @@ hr {
 
   &__sectionHeading {
     @include section-heading;
+    margin-top: 90px;
     color: map-get($brand-colors, first);
   }
 
