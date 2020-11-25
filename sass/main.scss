@@ -441,7 +441,7 @@ hr {
   &__date {
     font-family: map-get($brand-fonts, first);
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-top: 5px;
     text-transform: uppercase;
   }
@@ -449,7 +449,7 @@ hr {
   &__time {
     font-family: map-get($brand-fonts, first);
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   &__buttonWrapper {
