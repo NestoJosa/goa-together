@@ -466,7 +466,7 @@ hr {
   &__button {
     @include button-base;
     background-color: gray;
-    border: 1px solid rgba(white, 1);
+    border: 2px solid white;
 
     // the buttons are 'inactive' as default,
     // so make them opague 
@@ -480,13 +480,15 @@ hr {
       // for chrome and edge
       margin-left: auto;
     }
-  }
 
-  &__button--active {
-    // revert the default inactive styles
-    opacity: 1.0;
-    cursor: pointer;
-    pointer-events: auto; 
+    &--active {
+      // revert the default inactive styles
+      opacity: 1.0;
+      cursor: pointer;
+      pointer-events: auto;
+      background-color: map-get($brand-colors, first);
+      font-weight: 600!important;
+    }
   }
   
   &__link {
@@ -497,6 +499,10 @@ hr {
     
     &:hover {
       color: white;
+    }
+
+    &--active {
+      font-weight: 600;
     }
   }
 }
