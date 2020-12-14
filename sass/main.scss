@@ -13,7 +13,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 li {
   list-style-type: none;
 }
@@ -61,8 +60,6 @@ $breakpoints: (
   // Extra Extra large screen
   xxl: 1800px
 );
-
-
 
 /* 
 
@@ -126,16 +123,32 @@ $breakpoints: (
 
 @mixin section-heading {
   font-family: map-get($brand-fonts, second);
-  width: 100%;
   text-align: center;
-  margin: 60px 0 40px;
   line-height: 1.1;
+  
+  margin-bottom: 0;
+  padding-bottom: 45px;
   font-size: 2.6rem;
   @include for-sm-up {
     font-size: 2.8rem;
+    padding-bottom: 70px;
   }
   @include for-lg-up {
     font-size: 3rem;
+  }
+
+}
+
+@mixin section-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include for-sm-up {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  @include for-lg-up {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
@@ -321,19 +334,24 @@ hr {
 
 */
 
-
 .QuoteWrapper {
-  padding-bottom: 25px;
+  @include section-padding;
+  /* remove the padding-bottom that comes from the include,
+  so that we do NOT create to much space to next wrapper */
+  padding-bottom: 0 !important;
 }
 
 .Quote {
   &__mark {
+    color: map-get($brand-colors, second);
     font-family: map-get($brand-fonts, second);
     font-size: 16rem;
     text-align: center;
-    width: 100%;
+    /* remove the top-space created by the large font-size,
+    so that we can control the top-space (or padding-top) via the container */
+    margin-top: -90px;
+    /* adjust the height of the element, in order to control the bottom-space*/
     height: 190px;
-    color: map-get($brand-colors, second);
   }
 
   &__quote {
@@ -379,21 +397,24 @@ hr {
 
 */
 
+.VideoSection {
+  @include section-padding;
+}
+
 .videoWrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
+  height: 0; 
+  padding-bottom: 56.25%; /*16:9*/
+  padding-top: 30px;
+  overflow: hidden;
 }
+
 .videoWrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.VideoSection {
-  padding: 50px 0;
 }
 
 /* 
@@ -404,8 +425,8 @@ hr {
 
 .WebinarsSection {
   background-color: map-get($brand-colors, first);
-  padding-top: 50px;
-  padding-bottom: 100px;
+  @include section-padding;
+  
 
   &__heading {
   @include section-heading;
@@ -418,9 +439,13 @@ hr {
 }
 
 .Webinar {
+  padding-left: 5px;
+  @include for-sm-up {
+    padding-left: 0;
+  }
+
   background-color: #f1e8c8;
-  border: 5px solid white;
-  padding-top: 70px;
+  padding-top: 50px;
   padding-bottom: 50px;
 
   &__list {
@@ -466,7 +491,6 @@ hr {
   &__button {
     @include button-base;
     background-color: gray;
-    border: 2px solid white;
 
     // the buttons are 'inactive' as default,
     // so make them opague 
@@ -515,7 +539,7 @@ hr {
 
 .WhyWrapper {
   background-color: #f1e8c8;
-  padding-bottom: 50px;
+  @include section-padding;
 }
 
 .Why {
@@ -523,7 +547,6 @@ hr {
 
   &__sectionHeading {
     @include section-heading;
-    margin-top: 90px;
     color: map-get($brand-colors, first);
   }
 
@@ -537,12 +560,16 @@ hr {
 
   &__text {
     font-family: map-get($brand-fonts, first);
-    margin-bottom: 30px;
     font-size: 1rem;
     line-height: 1.5;
     @include for-lg-up {
       font-size: 1.2rem;
       line-height: 1.6;
+    }
+
+    & p:last-of-type {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
     }
   }
 }
@@ -555,9 +582,17 @@ hr {
 
 .LogoWrapper {
   background-color: rgba($color: #000000, $alpha: 0.1);
-  padding-top: 30px;
-  padding-bottom: 20px;
-  
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @include for-sm-up {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include for-lg-up {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
 }
 
 /* 
