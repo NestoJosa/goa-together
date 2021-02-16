@@ -404,9 +404,10 @@ hr {
 .videoWrapper {
   position: relative;
   height: 0; 
-  padding-bottom: 56.25%; /*16:9*/
-  padding-top: 30px;
+  padding-bottom: 56.25%; // 16:9
+  // padding-top: 30px;
   overflow: hidden;
+  margin-right: 1px; // small-hack to fix right-line in chrome
 }
 
 .videoWrapper iframe {
